@@ -8,16 +8,3 @@ func TestMapDictionary(t *testing.T) {
 		t.Fatal("failed test")
 	}
 }
-
-func equalMap(a, b map[string]int) bool  {
-	if len(a) != len(b) {
-		return false
-	}
-
-	for k, _ := range a {
-		if a[k] != b[k] {
-			return false
-		}
-	}
-	return true
-}

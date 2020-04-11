@@ -15,12 +15,3 @@ func MapDictionary(s string) map[string]int  {
 	}
 	return maps
 }
-
-func contains(s []int, t int) bool  {
-	for _, v := range s {
-		if v == t {
-			return true
-		}
-	}
-	return false
-}
