@@ -5,7 +5,7 @@ func equalArray(a, b []int) bool  {
 		return false
 	}
 
-	for i, _ := range a {
+	for i := range a {
 		if a[i] != b[i] {
 			return false
 		}
@@ -18,7 +18,7 @@ func equalMap(a, b map[string]int) bool  {
 		return false
 	}
 
-	for k, _ := range a {
+	for k := range a {
 		if a[k] != b[k] {
 			return false
 		}
