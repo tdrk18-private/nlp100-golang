@@ -2,7 +2,7 @@ package section1
 
 import "strings"
 
-func MapDictionary(s string) map[string]int  {
+func MapDictionary(s string) map[string]int {
 	slice := strings.Split(s, " ")
 	var maps = make(map[string]int)
 	for i := range slice {

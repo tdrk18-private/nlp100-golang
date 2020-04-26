@@ -2,7 +2,7 @@ package section1
 
 import "strings"
 
-func CharCount(s string) []int  {
+func CharCount(s string) []int {
 	slice := strings.Split(s, " ")
 	rep := strings.NewReplacer(",", "", ".", "")
 	var counts []int

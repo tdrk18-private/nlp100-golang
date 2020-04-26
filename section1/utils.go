@@ -1,6 +1,6 @@
 package section1
 
-func equalArray(a, b []int) bool  {
+func equalArray(a, b []int) bool {
 	if len(a) != len(b) {
 		return false
 	}
@@ -13,7 +13,7 @@ func equalArray(a, b []int) bool  {
 	return true
 }
 
-func equalMap(a, b map[string]int) bool  {
+func equalMap(a, b map[string]int) bool {
 	if len(a) != len(b) {
 		return false
 	}
@@ -26,7 +26,7 @@ func equalMap(a, b map[string]int) bool  {
 	return true
 }
 
-func contains(s []int, t int) bool  {
+func contains(s []int, t int) bool {
 	for _, v := range s {
 		if v == t {
 			return true
