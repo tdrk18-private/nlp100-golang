@@ -2,7 +2,7 @@ package section1
 
 import "math"
 
-func Merge(s string, t string) string  {
+func Merge(s string, t string) string {
 	runesS := []rune(s)
 	runesT := []rune(t)
 	var strings []rune
