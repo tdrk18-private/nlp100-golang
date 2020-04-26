@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./section1"
 	"fmt"
+	"github.com/tdrk18/nlp100/section1"
 )
 
 func main() {
