@@ -2,8 +2,7 @@ language: go
 go:
   - 1.14.2
 install:
-  - curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.25.0
+  - make install-lint
 script:
-  - golangci-lint run
-  - go test ./... -v -cover
-  - cd section1 && go test ./... -v -cover && cd ..
+  - make lint
+  - make test
