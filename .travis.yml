@@ -6,3 +6,4 @@ install:
 script:
   - golangci-lint run
   - go test ./... -v -cover
+  - cd section1 && go test ./... -v -cover && cd ..
