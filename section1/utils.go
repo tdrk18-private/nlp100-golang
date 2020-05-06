@@ -1,5 +1,7 @@
 package section1
 
+import "github.com/golang-collections/collections/set"
+
 func equalArray(a, b []int) bool {
 	if len(a) != len(b) {
 		return false
@@ -37,6 +39,14 @@ func equalMap(a, b map[string]int) bool {
 		}
 	}
 	return true
+}
+
+func equalSet(a, b *set.Set) bool  {
+	if a.Len() != b.Len() {
+		return false
+	}
+
+	return a.SubsetOf(b) && b.SubsetOf(a)
 }
 
 func contains(s []int, t int) bool {

@@ -1,6 +1,9 @@
 package section1
 
-import "testing"
+import (
+	"github.com/golang-collections/collections/set"
+	"testing"
+)
 
 func TestEqualArray(t *testing.T) {
 	result := equalArray([]int{1, 2, 3}, []int{1, 2, 3})
@@ -27,6 +30,25 @@ func TestEqualMap(t *testing.T) {
 		t.Fatal("failed test")
 	}
 	result = equalMap(map[string]int{"hoge": 1, "fuga": 2, "bar": 3}, map[string]int{"hoge": 1, "fuga": 2})
+	if result {
+		t.Fatal("failed test")
+	}
+}
+
+func TestEqualSet(t *testing.T)  {
+	result := equalSet(set.New(1, 2, 3), set.New(1, 2, 3))
+	if !result {
+		t.Fatal("failed test")
+	}
+	result = equalSet(set.New(1, 2), set.New(1, 2, 3))
+	if result {
+		t.Fatal("failed test")
+	}
+	result = equalSet(set.New(1, 2, 3), set.New(1, 2))
+	if result {
+		t.Fatal("failed test")
+	}
+	result = equalSet(set.New(1, 2, 3), set.New(1, 2, 4))
 	if result {
 		t.Fatal("failed test")
 	}
