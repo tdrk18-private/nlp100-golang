@@ -1,6 +1,9 @@
 .PHONY: test
 .PHONY: lint
 
+go-get:
+	go get -u -t ./...
+
 install-lint:
 	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.25.0
 
